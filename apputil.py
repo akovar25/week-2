@@ -15,9 +15,11 @@ def ways(n, coin_types=[1, 5]):
 
 def lowest_score(names, scores):
         # Return name with lowest score
+        names = np.array(names)
         return names[np.argmin(scores)]
 
 def sort_names(names, scores):
          # Return names sorted by descending scores
         sorted_indices = np.argsort(scores)[::-1]  # reverse for descending order
+        names = np.array(names)
         return names[sorted_indices]
